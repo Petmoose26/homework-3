@@ -12,6 +12,9 @@ generatePasswordButton.addEventListener('click', displayRandomPassword);
 //get user input to help generate password
 function generatePassword() {
   var userLength = prompt('choose how long you would like your password to be 8 through 128');
+while (userLength > 128 || userLength < 8) {
+      userLength = prompt('Enter a number between 8 and 128');
+    }
   var upperCase = confirm('would you like upper case letters?');
   var lowerCase = confirm('would you like lower case letters?');
   var specialCharacters = confirm('would you like special characters?');
@@ -40,6 +43,7 @@ function generatePasswordFromCriteria(upperCase, lowerCase, specialCharacters, n
   if (numbers) {
     includedCharacters += numbers;
   }
+  
   //running a for loop to run though the strings
   for (var i = 0; i < userLength; i++) {
     //random position from  included characters 
