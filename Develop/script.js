@@ -24,24 +24,24 @@ while (userLength > 128 || userLength < 8) {
 }
 // give var's strings, look to see what is true from user response. 
 function generatePasswordFromCriteria(upperCase, lowerCase, specialCharacters, numbers, userLength) {
-  var upperCase = ('QWERTYUIOPASDFGHJKLZXCVBNM');
-  var lowerCase = (upperCase.toLowerCase());
-  var specialCharacters = ('!@#$%^&*()+?');
-  var numbers = ('1234567890');
+  var upperCaseCharacters = ('QWERTYUIOPASDFGHJKLZXCVBNM');
+  var lowerCaseCharacters = (upperCaseCharacters.toLowerCase());
+  var specialCharCharacters = ('!@#$%^&*()+?');
+  var numberCharacters = ('1234567890');
   var includedCharacters = "";
   password = "";
   //checking if password is to include what the user agreed to. 
   if (upperCase) {
-    includedCharacters += upperCase;
+    includedCharacters += upperCaseCharacters;
   }
   if (lowerCase) {
-    includedCharacters += lowerCase;
+    includedCharacters += lowerCaseCharacters;
   }
   if (specialCharacters) {
-    includedCharacters += specialCharacters;
+    includedCharacters += specialCharCharacters;
   }
   if (numbers) {
-    includedCharacters += numbers;
+    includedCharacters += numberCharacters;
   }
   
   //running a for loop to run though the strings
